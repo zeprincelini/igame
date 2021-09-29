@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-4 offset-md-4">
+      <div class="alert alert-success" *ngIf="authorizationStatus">
+        {{ successMsg }}
+      </div>
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="form-group">
+          <input type="email" name="email" class="form-control" ngModel />
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" class="form-control" ngModel />
+        </div>
+        <button class="btn btn-primary w-100">submit</button>
+      </form>
+    </div>
+  </div>
+</div>
